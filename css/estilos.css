@@ -1,0 +1,42 @@
+body{
+    background-image: url('../img/food.png');
+}
+
+.navbar{
+    background-color: #2b2b2b;
+    border: #2b2b2b;
+}
+
+.navbar-brand:link, .navbar-brand:visited{
+    color: #FACE68 !important;
+}
+
+.navbar-brand:hover, .navbar-brand:active{
+    color: white !important;
+}
+
+#navbar li a:link, #navbar li a:visited{
+    color: white !important;
+}
+
+#navbar li a:hover, #navbar li a:active{
+    color: #FACE68 !important;
+}
+
+.jumbotron{
+    background-color: #2b2b2b !important;
+    color: white !important;
+}
+.jumbotron h4{
+    color: whitesmoke !important;
+}
+
+.panel{
+    border: #2b2b2b;
+}
+
+.panel-heading{
+    background-color: #2b2b2b !important;
+    color: white !important;
+}
+

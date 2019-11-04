@@ -1,0 +1,11 @@
+CREATE DATABASE calculadoranutricional;
+USE calculadoranutricional;
+CREATE TABLE users (
+	id INT NOT NULL UNIQUE AUTO_INCREMENT,
+	name VARCHAR(25) NOT NULL UNIQUE,
+	email VARCHAR(200) NOT NULL UNIQUE,
+	password VARCHAR(40) NOT NULL,
+	hiredate DATETIME NOT NULL,
+	active TINYINT NOT NULL, 
+	PRIMARY KEY(id)
+);
