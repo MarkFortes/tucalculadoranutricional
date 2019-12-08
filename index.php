@@ -15,9 +15,9 @@
             <div class="jumbotron">
                 <h1>tucalculadoranutricional</h1>
                 <h4>El lugar donde llevaras el control de tu salud</h3>
-            </div>  
-        </div>    
-            
+            </div>
+        </div>
+
 
         <div class="container">
             <div class="row">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <div class="row">    
+                            <div class="row">
                                 <div class="col-md-12">
                                     DATOS PERSONALES
                                     <hr width= "90%" noshade = "noshade" />
@@ -65,26 +65,26 @@
                                     <form role="form" action="" name="form" method="post">
                                         <div class="form-group">
                                             <label>Peso (kg.)</label>
-                                            <input type="number" step="any" class="form-control" name="peso" id="peso">
+                                            <input type="number" step="any" class="form-control" name="peso" id="peso" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Altura (cm.)</label>
-                                            <input type="number" step="any" class="form-control" name="estatura" id="estatura">
+                                            <input type="number" step="any" class="form-control" name="estatura" id="estatura" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Edad</label>
-                                            <input type="number" class="form-control" name="edad" id="edad">
+                                            <input type="number" class="form-control" name="edad" id="edad" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Sexo</label>
-                                            <select class="form-control" name="sexo" id="sexo">
+                                            <select required class="form-control" name="sexo" id="sexo">
                                                 <option>Hombre</option>
                                                 <option>Mujer</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Actividad fisica</label>
-                                            <select class="form-control" name="ejercicio" id="ejercicio">
+                                            <select required class="form-control" name="ejercicio" id="ejercicio">
                                                 <option>Poco o ningun ejercicio</option>
                                                 <option>Ejercicio ligero (1 - 3 días a la semana)</option>
                                                 <option>Ejercicio moderado (3 - 5 días a la semana)</option>
@@ -156,17 +156,17 @@
                                     }else if(!strcmp("Ejercicio muy fuerte (Todos los días, mañana y tarde)", $ejercicio)){
                                         global $ejpoco;
                                         $kcalmantenimiento *= $ejmuyfuerte;
-                                    }    
-                
+                                    }
+
                                     $kcaldefinicion = $kcalmantenimiento - 400;
                                     $kcalvolumen = $kcalmantenimiento + 400;
-                
+
                                 }
                             ?>
 
 
 
-                            <div class="row">    
+                            <div class="row">
                                 <div class="col-md-12">
                                     RESULTADOS
                                     <hr width= "90%" noshade = "noshade" />
@@ -174,15 +174,15 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Calorias para perder peso:</label>
-                                            <input type="number" step="any" class="form-control" value="<?php echo "$kcaldefinicion"; ?>">
+                                            <input type="number" step="any" class="form-control" value="<?php echo round($kcaldefinicion); ?>">
                                         </div>
                                         <div class="form-group">
                                             <label>Caloriás de mantenimiento:</label>
-                                            <input type="number" step="any" class="form-control" value="<?php echo "$kcalmantenimiento"; ?>">
+                                            <input type="number" step="any" class="form-control" value="<?php echo round($kcalmantenimiento); ?>">
                                         </div>
                                         <div class="form-group">
                                             <label>Caloriás para ganar peso:</label>
-                                            <input type="number" class="form-control" value="<?php echo "$kcalvolumen"; ?>">
+                                            <input type="number" class="form-control" value="<?php echo round($kcalvolumen); ?>">
                                         </div>
                                     </form>
                                 </div>

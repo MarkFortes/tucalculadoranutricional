@@ -26,7 +26,7 @@
     $validador -> mostrarErrorPassword2();
     ?>
 </div>
-                        
+
 <button type="reset" class="btn btn-default">Limpiar campos</button>
 <br><br>
 <button type="submit" class="btn btn-default" name="button">Crear cuenta</button>

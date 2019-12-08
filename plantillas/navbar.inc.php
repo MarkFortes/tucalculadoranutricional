@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">tucalculadoranutricional</a>
+            <a class="navbar-brand" href="index.php">tucalculadoranutricional</a>
             </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -14,7 +14,7 @@
                         <li><a href="#">Descargar aplicacion</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Iniciar Sesion</a></li>
+                        <li><a href="inicioSesion.php">Iniciar Sesion</a></li>
                         <li><a href="registro.php">Registro</a></li>
                     </ul>
             </div>
