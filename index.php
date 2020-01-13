@@ -1,11 +1,4 @@
 <?php
-    include_once 'app/conexion.inc.php';
-    include_once 'app/repositorioUsuario.inc.php';
-
-    Conexion :: abrirConexion();
-    $totalUsuarios = repositorioUsuario :: obtenerNumeroUsuarios(Conexion :: obtenerConexion());
-    Conexion :: cerrarConexion();
-
     $titulo = 'Calculadora Nutricional';
 
     include_once 'plantillas/documentoApertura.inc.php';
@@ -198,10 +191,7 @@
                                     <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Estadisticas
                                 </div>
                                 <div class="panel-body">
-                                    Usuarios registrados:
-                                    <?php
-                                    echo $totalUsuarios;
-                                    ?>
+                                    Usuarios registrados: 5
                                 </div>
                             </div>
                         </div>

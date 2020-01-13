@@ -1,30 +1,4 @@
 <?php
-    include_once 'app/conexion.inc.php';
-    include_once 'app/usuario.inc.php';
-    include_once 'app/repositorioUsuario.inc.php';
-    include_once 'app/validadorRegistro.inc.php';
-
-    if (isset($_POST['button'])) {
-        Conexion :: abrirConexion();
-
-        $validador = new validadorRegistro($_POST['name'], $_POST['email'], $_POST['password1'], $_POST['password2'], Conexion :: obtenerConexion());
-
-        if ($validador -> registroValido()) {
-            $usuario = new Usuario('', $validador -> obtenerNombre(), $validador -> obtenerEmail(), $validador -> obtenerPassword(), '', '');
-            $usuarioInsertado = repositorioUsuario :: insertarUsuario(Conexion :: obtenerConexion(), $usuario);
-
-            if ($usuarioInsertado) {
-                //Redirigir a login
-            }
-        }
-
-        Conexion :: cerrarConexion();
-    }
-
-    Conexion :: abrirConexion();
-    $totalUsuarios = repositorioUsuario :: obtenerNumeroUsuarios(Conexion :: obtenerConexion());
-    Conexion :: cerrarConexion();
-
     $titulo = 'Registro';
 
     include_once 'plantillas/documentoApertura.inc.php';
@@ -48,13 +22,9 @@
                 </div>
                 <div class="panel-body">
                     <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                        <?php
-                            if (isset($_POST['button'])) {
-                                include_once 'plantillas/registroValidado.inc.php';
-                            } else {
-                                include_once 'plantillas/inicioSesion.inc.php';
-                            }
-                        ?>
+                      <?php
+                        include_once 'plantillas/inicioSesion.inc.php';
+                      ?>
                     </form>
 
 
@@ -67,7 +37,5 @@
 </div>
 
 <?php
-
     include_once 'plantillas/documentoCierre.inc.php';
-
 ?>

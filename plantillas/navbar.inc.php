@@ -4,14 +4,13 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.php">tucalculadoranutricional</a>
-            </div>
+        </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Mis datos</a></li>
-                        <li><a href="#">Descargar aplicacion</a></li>
+                        <li><a href="descargarAplicacion.php">Descargar aplicacion</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="inicioSesion.php">Iniciar Sesion</a></li>

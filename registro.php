@@ -1,30 +1,4 @@
 <?php
-    include_once 'app/conexion.inc.php';
-    include_once 'app/usuario.inc.php';
-    include_once 'app/repositorioUsuario.inc.php';
-    include_once 'app/validadorRegistro.inc.php';
-
-    if (isset($_POST['button'])) {
-        Conexion :: abrirConexion();
-
-        $validador = new validadorRegistro($_POST['name'], $_POST['email'], $_POST['password1'], $_POST['password2'], Conexion :: obtenerConexion());
-
-        if ($validador -> registroValido()) {
-            $usuario = new Usuario('', $validador -> obtenerNombre(), $validador -> obtenerEmail(), $validador -> obtenerPassword(), '', '');
-            $usuarioInsertado = repositorioUsuario :: insertarUsuario(Conexion :: obtenerConexion(), $usuario);
-
-            if ($usuarioInsertado) {
-                //Redirigir a login
-            }
-        }
-
-        Conexion :: cerrarConexion();
-    }
-
-    Conexion :: abrirConexion();
-    $totalUsuarios = repositorioUsuario :: obtenerNumeroUsuarios(Conexion :: obtenerConexion());
-    Conexion :: cerrarConexion();
-
     $titulo = 'Registro';
 
     include_once 'plantillas/documentoApertura.inc.php';
@@ -47,15 +21,15 @@
                         <h3 class="panel-title">
                             Instrucciones
                         </h3>
-                    
+
                         </div>
                         <div class="panel-body text-justify">
                             <p>
                             Me imagino que si estás aquí es porque estás pensando en registrarte en TuCalculadoraNutricional.
-                            Si no sabes las ventajas que te puede proporcionar estar registrado/a en este sitio web, puedes leer algunas de ellas 
+                            Si no sabes las ventajas que te puede proporcionar estar registrado/a en este sitio web, puedes leer algunas de ellas
                             a continuación:
                             </p>
-                    
+
                             <ul>
                                 <li>Acceso a tus registros personales</li>
                                 <li>Tener tu propio seguimiento</li>
@@ -89,15 +63,11 @@
                 </div>
                 <div class="panel-body">
                     <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                        <?php
-                            if (isset($_POST['button'])) {
-                                include_once 'plantillas/registroValidado.inc.php';
-                            } else {
-                                include_once 'plantillas/registroVacio.inc.php';
-                            }
-                        ?>
+                      <?php
+                        include_once 'plantillas/registroVacio.inc.php';
+                      ?>
                     </form>
-                    
+
                     <br>
                     <a href="#">¿Ya tienes cuenta?</a>
                     <br><br>
