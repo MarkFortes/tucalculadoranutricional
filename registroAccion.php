@@ -1,13 +1,10 @@
 <?php
 
-echo $_POST['name'];
+echo $_POST['txtNickname'];
 echo "<br>";
 
-echo $_POST['email'];
+echo $_POST['txtEmail'];
 echo "<br>";
 
-echo $_POST['password1'];
+echo $_POST['txtPassword'];
 echo "<br>";
-
-echo $_POST['password2'];
-echo "<br>";  

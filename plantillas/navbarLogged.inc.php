@@ -13,8 +13,7 @@
                         <li><a href="descargarAplicacion.php">Descargar aplicacion</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="inicioSesion.php">Iniciar Sesion</a></li>
-                        <li><a href="registro.php">Registro</a></li>
+                        <li><a href="controladores/cerrarSesionController.php">Cerrar sesión</a></li>
                     </ul>
             </div>
         </div>

@@ -1,8 +1,13 @@
 <?php
-    $titulo = 'Registro';
+  session_start();
+  if (isset($_SESSION["user"])) {
+    header("Location:index.php");
+  }
 
-    include_once 'plantillas/documentoApertura.inc.php';
-    include_once 'plantillas/navbar.inc.php';
+  $titulo = 'Registro';
+
+  include_once 'plantillas/documentoApertura.inc.php';
+  include_once 'plantillas/navbar.inc.php';
 ?>
 
 <div class="container">
@@ -17,18 +22,16 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class='panel-title'>
-                        Datos de registro
+                        Datos de cuenta
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <form role="form" method="post" action="controladores/validateUserController.php">
                       <?php
                         include_once 'plantillas/inicioSesion.inc.php';
                       ?>
                     </form>
-
-
-                    <br><br>
+                    <br>
                     <a href="#">¿Has olvidado tu contraseña?</a>
                 </div>
             </div>

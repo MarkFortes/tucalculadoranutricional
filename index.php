@@ -1,8 +1,14 @@
 <?php
-    $titulo = 'Calculadora Nutricional';
-
-    include_once 'plantillas/documentoApertura.inc.php';
+  session_start();
+  if (!isset($_SESSION["user"])) {
     include_once 'plantillas/navbar.inc.php';
+  }else {
+    include_once 'plantillas/navbarLogged.inc.php';
+  }
+
+  $titulo = 'Calculadora Nutricional';
+
+  include_once 'plantillas/documentoApertura.inc.php';
 ?>
         <div class="container">
             <div class="jumbotron">

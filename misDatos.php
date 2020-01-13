@@ -12,7 +12,7 @@
 
 <div class="container center-screen">
   <div class="jumbotron">
-    <h1 class="text-center">Próximamente tucalculadoranutricional en tu escritorio...</h1>
+    <h1 class="text-center">Próximamente tus estadisticas personalizadas...</h1>
   </div>
 </div>
 

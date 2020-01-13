@@ -1,8 +1,13 @@
 <?php
-    $titulo = 'Registro';
+  session_start();
+  if (isset($_SESSION["user"])) {
+    header("Location:index.php");
+  }
 
-    include_once 'plantillas/documentoApertura.inc.php';
-    include_once 'plantillas/navbar.inc.php';
+  $titulo = 'Registro';
+
+  include_once 'plantillas/documentoApertura.inc.php';
+  include_once 'plantillas/navbar.inc.php';
 ?>
 
 <div class="container">
@@ -48,7 +53,7 @@
                             Registros en directo
                         </div>
                         <div class="panel-body">
-                            Numero de usuarios registrados: <?php echo $totalUsuarios ?>
+                            Numero de usuarios registrados: 5
                         </div>
                     </div>
                 </div>
@@ -62,7 +67,7 @@
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <form role="form" method="post" action="controladores/createUserController.php">
                       <?php
                         include_once 'plantillas/registroVacio.inc.php';
                       ?>
